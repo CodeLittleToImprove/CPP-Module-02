@@ -19,7 +19,7 @@ int main(void)
 	Fixed b(a);	// create deep copy of b as a copy of a using the copy constructor
 	Fixed c;
 
-	c = b;			//assign the copy of b to c
+	c = b;			//assign the copy of b to c using the copy assignment operator
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;

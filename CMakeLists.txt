@@ -7,3 +7,7 @@ set(CMAKE_CXX_STANDARD 98)
 add_executable(cpp02_ex_00
         ex00/Fixed.cpp
     ex00/main.cpp)
+
+add_executable(cpp02_ex_01
+        ex01/Fixed.cpp
+        ex01/main.cpp)
