@@ -24,14 +24,14 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &copy)
 {
 	std::cout << "Copy Constructor called" << std::endl;
-	*this = copy;
+	this->_fixpoint_nbr = copy.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed &src)
 {
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
 		this->_fixpoint_nbr = src.getRawBits();
-	std::cout << "Copy assignment operator called" << std::endl;
 	return *this;
 }
 
