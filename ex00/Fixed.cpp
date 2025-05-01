@@ -27,11 +27,11 @@ Fixed::Fixed(const Fixed &copy)
 	this->_fixpoint_nbr = copy.getRawBits();
 }
 
-Fixed& Fixed::operator=(const Fixed &src)
+Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &src)
-		this->_fixpoint_nbr = src.getRawBits();
+	if (this != &other)
+		this->_fixpoint_nbr = other.getRawBits();
 	return *this;
 }
 
@@ -40,7 +40,7 @@ Fixed::~Fixed()
 	std::cout << "Deconstructor called" << std::endl;
 }
 
-int		Fixed::getRawBits()const
+int		Fixed::getRawBits(void)const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->_fixpoint_nbr;

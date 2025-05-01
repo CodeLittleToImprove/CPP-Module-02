@@ -42,11 +42,11 @@ Fixed::Fixed(const float input)
 // 	std::cout << "fixpoint nbr after conversion for float "<< this->_fixpoint_nbr << std::endl;
 }
 
-Fixed& Fixed::operator=(const Fixed &src)
+Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &src)
-		this->_fixpoint_nbr = src.getRawBits();
+	if (this != &other)
+		this->_fixpoint_nbr = other.getRawBits();
 	return *this;
 }
 

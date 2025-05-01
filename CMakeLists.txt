@@ -11,3 +11,7 @@ add_executable(cpp02_ex_00
 add_executable(cpp02_ex_01
         ex01/Fixed.cpp
         ex01/main.cpp)
+
+add_executable(cpp02_ex_02
+        ex02/Fixed.cpp
+        ex02/main.cpp)

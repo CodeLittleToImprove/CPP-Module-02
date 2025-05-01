@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 
-# ifndef CPP0X_TEMPLATE_HPP
-# define CPP0X_TEMPLATE_HPP
+# ifndef EX00_HPP
+# define EX00_HPP
 
 #include <iostream>
 
@@ -25,11 +25,11 @@ class	Fixed
 		static const int	_fractional_bits;
 	public:
 		Fixed();								//Default Constructor
-		Fixed(const Fixed &other);				// Copy Constructor alias deep copy
+		Fixed(const Fixed &copy);				// Copy Constructor alias deep copy
 		Fixed &operator = (const Fixed &other);	// Copy Assignment Constructor
 		~Fixed();								// Destructor
 		int		getRawBits(void)const;
 		void	setRawBits(int raw);
 };
 
-#endif //CPP0X_TEMPLATE_HPP
+#endif
