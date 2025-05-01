@@ -30,13 +30,16 @@ Fixed::Fixed(const Fixed &copy)
 Fixed::Fixed(const int input)
 {
 	std::cout << "Int Constructor called" << std::endl;
-	this->_fixpoint_nbr = input << this->_fractional_bits; //leftshift operator
+	this->_fixpoint_nbr = input << this->_fractional_bits; //leftshift operator equal in this case to multiplicate by 256 because 2^8 = 256
+	// std::cout << "fixpoint nbr after conversion for int "<< this->_fixpoint_nbr << std::endl;
 }
 
 Fixed::Fixed(const float input)
 {
 	std::cout << "Float Constructor called" << std::endl;
 	this->_fixpoint_nbr = roundf(input * (1 << this->_fractional_bits)); //float to fixed point value
+// 	std::cout << "fixpoint nbr before rounding for float "<< input * (1 << this->_fractional_bits) << std::endl;
+// 	std::cout << "fixpoint nbr after conversion for float "<< this->_fixpoint_nbr << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed &src)
@@ -70,7 +73,7 @@ float	Fixed::toFloat(void)const
 
 int	Fixed::toInt(void)const
 {
-	return (this->_fixpoint_nbr >> this->_fractional_bits);
+	return (this->_fixpoint_nbr >> this->_fractional_bits); // right shift to divide
 }
 
 std::ostream& operator<<(std::ostream &outStream, const Fixed &fixedObj)
