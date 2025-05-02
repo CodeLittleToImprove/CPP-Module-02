@@ -28,6 +28,7 @@
 // 	return 0;
 // }
 
+// example for when fixpoint nbr is better
 // #include <iomanip>  // for std::setprecision
 // int main(void)
 // {
@@ -54,54 +55,62 @@
 // }
 
 
-// int main(void)
-// {
-// 	Fixed a(2.5f);
-// 	Fixed b(1.25f);
-// 	Fixed c;
-//
-// 	std::cout << "Initial values:\n";
-// 	std::cout << "a = " << a << ", b = " << b << ", c = " << c << "\n\n";
-//
-// 	// Arithmetic
-// 	std::cout << "--- Arithmetic ---\n";
-// 	std::cout << "a + b = " << (a + b) << "\n";
-// 	std::cout << "a - b = " << (a - b) << "\n";
-// 	std::cout << "a * b = " << (a * b) << "\n";
-// 	std::cout << "a / b = " << (a / b) << "\n\n";
-//
-// 	// Comparison
-// 	std::cout << "--- Comparison ---\n";
-// 	std::cout << "a == b? " << (a == b) << "\n";
-// 	std::cout << "a != b? " << (a != b) << "\n";
-// 	std::cout << "a > b?  " << (a > b) << "\n";
-// 	std::cout << "a < b?  " << (a < b) << "\n";
-// 	std::cout << "a >= b? " << (a >= b) << "\n";
-// 	std::cout << "a <= b? " << (a <= b) << "\n\n";
-//
-// 	// Assignment
-// 	std::cout << "--- Assignment ---\n";
-// 	c = a;
-// 	std::cout << "c = a -> c = " << c << "\n\n";
-//
-// 	// Pre-increment / Pre-decrement
-// 	std::cout << "--- Pre-increment/decrement ---\n";
-// 	std::cout << "++a = " << ++a << "\n";
-// 	std::cout << "--a = " << --a << "\n\n";
-//
-// 	// Post-increment / Post-decrement
-// 	std::cout << "--- Post-increment/decrement ---\n";
-// 	std::cout << "a++ = " << a++ << " (before)\n";
-// 	std::cout << "After a++: " << a << "\n";
-// 	std::cout << "a-- = " << a-- << " (before)\n";
-// 	std::cout << "After a--: " << a << "\n\n";
-//
-// 	// Min/Max
-// 	std::cout << "--- Min / Max ---\n";
-// 	std::cout << "min(a, b) = " << Fixed::min(a, b) << "\n";
-// 	std::cout << "max(a, b) = " << Fixed::max(a, b) << "\n";
-//
-// 	return 0;
-// }
+int main(void)
+{
+	Fixed		a(2.5f);
+	Fixed		b(1.25f);
+	Fixed		c;
+	const Fixed	ca(4.2f);
+	const Fixed	cb(9.1f);
+
+	std::cout << "Initial values:" << std::endl;
+	std::cout << "a = " << a << ", b = " << b << ", c = " << c << std::endl << std::endl;
+
+	// Arithmetic
+	std::cout << "--- Arithmetic ---" << std::endl;
+	std::cout << "a + b = " << (a + b) << std::endl;
+	std::cout << "a - b = " << (a - b) << std::endl;
+	std::cout << "a * b = " << (a * b) << std::endl;
+	std::cout << "a / b = " << (a / b) << std::endl << std::endl;
+
+	// Comparison
+	std::cout << "--- Comparison ---" << std::endl;
+	std::cout << "a == b? " << (a == b) << std::endl;
+	std::cout << "a != b? " << (a != b) << std::endl;
+	std::cout << "a > b?  " << (a > b) << std::endl;
+	std::cout << "a < b?  " << (a < b) << std::endl;
+	std::cout << "a >= b? " << (a >= b) << std::endl;
+	std::cout << "a <= b? " << (a <= b) << std::endl << std::endl;
+
+	// Assignment
+	std::cout << "--- Assignment ---" << std::endl;
+	c = a;
+	std::cout << "c = a -> c = " << c << std::endl << std::endl;
+
+	// Pre-increment / Pre-decrement
+	std::cout << "--- Pre-increment/decrement ---" << std::endl;
+	std::cout << "++a = " << ++a << std::endl;
+	std::cout << "--a = " << --a << std::endl << std::endl;
+
+	// Post-increment / Post-decrement
+	std::cout << "--- Post-increment/decrement ---" << std::endl;
+	std::cout << "a++ = " << a++ << " (before)" << std::endl;
+	std::cout << "After a++: " << a << std::endl;
+	std::cout << "a-- = " << a-- << " (before)" << std::endl;
+	std::cout << "After a--: " << a << std::endl << std::endl;
+
+	// Min/Max
+	std::cout << "--- Min / Max ---" << std::endl;
+	std::cout << "min(a, b) = " << Fixed::min(a, b) << std::endl;
+	std::cout << "max(a, b) = " << Fixed::max(a, b) << std::endl;
+
+	// Const Min/Max
+	std::cout << "--- Const Min / Max ---" << std::endl;
+	std::cout << "min(ca, cb) = " << Fixed::min(ca, cb) << std::endl;
+	std::cout << "max(ca, cb) = " << Fixed::max(ca, cb) << std::endl;
+
+	return 0;
+}
+
 
 

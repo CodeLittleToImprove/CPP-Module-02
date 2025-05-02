@@ -49,8 +49,10 @@ class	Fixed
 		bool	operator>(Fixed const &other) const;
 
 		//min and max functions
-		static const Fixed	&min(Fixed const &other1, Fixed const &other2);
-		static const Fixed	&max(Fixed const &other1, Fixed const &other2);
+		static			Fixed	&min(Fixed &other1, Fixed &other2);
+		static			Fixed	&max(Fixed &other1, Fixed &other2);
+		static const	Fixed	&min(Fixed const &other1, Fixed const &other2);
+		static const	Fixed	&max(Fixed const &other1, Fixed const &other2);
 
 		int		getRawBits(void)const;
 		void	setRawBits(int raw);

@@ -137,6 +137,19 @@ bool	Fixed::operator>(const Fixed &other) const
 {
 	return (this->toFloat() > other.toFloat());
 }
+Fixed	&Fixed::min(Fixed &other1, Fixed &other2)
+{
+	if (other1 < other2)
+		return (other1);
+	return (other2);
+}
+
+Fixed	&Fixed::max(Fixed &other1, Fixed &other2)
+{
+	if (other1 > other2)
+		return (other1);
+	return (other2);
+}
 
 const Fixed	&Fixed::min(Fixed const &other1, Fixed const &other2)
 {
